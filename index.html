@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>   
+</head>
+<body>
+    <nav id="nav" class="bg-gray-100/10 top-0 w-full sticky z-10 backdrop-blur-lg ">
+        <div class="max-w-screen-2xl mx-auto navbar">
+  <div class="navbar-start">
+  
+    <a href="#home" class="flex gap-1 items-center text-xl cursor-pointer"><span>English</span> <img src="./assets/logo.png" alt=""> <span>জানালা</span></a>
+  </div>
+  <div class="navbar-end gap-4">
+    <a href="#faq" class="btn border  border-[#422AD5] text-[#422AD5] rounded-md hover:bg-[#422AD5] hover:text-white"><i class="ri-question-fill text-base"></i>FAQ</>
+    <a href="#learn" class="btn border border-[#422AD5] text-[#422AD5] rounded-md hover:bg-[#422AD5] hover:text-white"><i class="ri-book-open-fill text-base"></i>Learn</a>
+    
+    <a onclick="logOut()" class="btn border border-[#422AD5] text-[#422AD5] rounded-md hover:bg-[#422AD5] hover:text-white"><i class="ri-logout-box-r-line text-base"></i>Logout</a>
+  </div>
+</div>
+
+</nav>
+<div class="border-b-2 border-[#C6BDBD]"></div>
+
+
+<section id="home" class="max-w-screen-2xl mx-auto flex items-center justify-between p-10">
+   
+    <div class="md:w-1/2 space-y-6">
+  
+        <h1 class="text-5xl font-bold text-[#00BCFF] pointer-events-none">
+            English <span class="text-[#18181B]">is Easy!!</span>
+        </h1>
+       
+        <p class="text-xl text-[#18181B] leading-8 pointer-events-none">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> 
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে 
+            <br>
+            যাবে অন্য একটি Level এ
+        </p>
+       
+        <div class="space-y-4">
+            <input id="nameInput" 
+                type="text" 
+                placeholder="Enter Your Name" 
+                class="w-full max-w-md p-3 border border-gray-300 rounded-lg"
+            >
+            <input id="passInput"
+                type="password" placeholder="Enter Login Code (123456)"
+                
+                class="w-full max-w-md p-3 border border-gray-300 rounded-lg"
+            >
+            
+            <button onclick="login()" class="btn flex flex-col text-[#E0E7FF] bg-[#422AD5] rounded-md"> GET STARTED</button>
+        </div>
+    </div>
+
+ 
+    <div class="w-1/2 flex justify-center">
+     
+        <div class="">
+            <img 
+                src="./assets/hero-student.png" 
+                alt="Person smiling" 
+                
+                >
+              </div>
+    </div>
+  </section>
+
+
+  
+  <main id="main" class="max-w-screen-2xl mx-auto ">
+    
+    
+    
+    
+    <section id="learn" class="py-40 mb-20 text-center min-h-screen">
+      <h1 class="text-4xl font-bold text-[#00BCFF] mb-8 pointer-events-none">
+            Let's <span class="text-[#18181B]">Learn Vocabularies</span>
+        </h1>
+        <div class="mb-9">
+          <button id="lesson-buttons"></button>
+          
+          <div id="loader" class="hidden text-center mt-5 mb-5">
+          <span class="loading loading-spinner text-secondary"></span>
+          </div>
+          
+          <div id="words" class="grid grid-cols-3 gap-5 mt-10 bg-[#F8F8F8] rounded-3xl"></div>
+          
+        </div>
+        
+        
+        
+        
+
+
+
+<dialog id="wordDetailsModal" class="modal">
+  <div class="modal-box">
+    <div id="wordDetailsContent">
+    </div>
+  </div>
+</dialog>
+
+
+
+          <div id="notFound" class="p-16 flex items-center justify-center bg-[#F8F8F8] rounded-3xl">
+
+                  <div class="rounded-lg text-center">
+                  
+                      <p class="text-[#79716B] font-normal text-sm pointer-events-none">
+                          আপনি এখনো কোন Lesson Select করেননি।
+                      </p>
+                    
+                      <h2 class="text-4xl font-medium text-[#292524] mt-3 pointer-events-none">
+                          একটি Lesson Select করুন।
+                      </h2>
+                  </div>
+              </div>
+
+       
+    
+    </section>
+
+
+   
+   
+
+
+    <section id="faq" class="text-center min-h-screen py-40">
+          <h1 class="text-4xl font-bold text-[#00BCFF] mb-8 pointer-events-none">
+            Frequently <span class="text-[#18181B]">Asked Questions</span>
+        </h1>
+
+        <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-14">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold tex">1. What is the difference between var, let, and const?</div>
+  <div class="collapse-content text-base">var => Function-scoped, hoisted, re-declarable, re-assignable. <br>
+    let => Block-scoped, not hoisted, re-assignable but not re-declarable. <br>
+    const => Block-scoped, not re-assignable.
+  </div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold tex">2. What is the difference between map(), forEach(), and filter()?</div>
+  <div class="collapse-content text-sm">map() => Creates new array with transformed elements. <br>
+forEach() => Executes function for each element, no return. <br>
+filter() => Creates new array with elements passing a test.</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold tex">3. What are arrow functions, and how are they different from regular functions?</div>
+  <div class="collapse-content text-sm">Arrow Functions => Concise syntax, no arguments <br>
+Differences => Cannot be used as constructors, more concise syntax compared to regular functions.</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold tex">4. How do JavaScript Promises work?</div>
+  <div class="collapse-content text-sm">Promises handle async operations with states such as Pending, Fulfilled, Rejected. Use resolve or reject in new Promise(), handle with .then(), .catch().</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold tex">5. How does closure work in JavaScript?</div>
+  <div class="collapse-content text-sm">Closure is when a function retains access to its outer scope's variables after the outer function finishes and enabling data privacy</div>
+</div>
+    </section>
+
+
+</main>
+
+
+<section class="bg-[#FFEBEB] mt-4">
+    <footer class="max-w-screen-2xl mx-auto footer footer-horizontal text-[#18181B] p-10">
+  <aside>
+     <a href="#home" class="flex gap-1 items-center text-xl cursor-pointer"><span>English</span> <img src="./assets/logo.png" alt=""> <span>জানালা</span></a>
+    <p>
+      ইংরেজি শিখুন সহজে
+      <br />
+      Providing ED-Tech Applications since 2025
+    </p>
+  </aside>
+
+   <nav class="grid-flow-col gap-4 place-self-center justify-self-end">
+     <div class="text-2xl">
+    <h2 class="text-[#18181B font-semibold mb-3 text-2xl">Follow us</h2>
+     <span> 
+      <a>
+     <i class="ri-facebook-fill hover:text-[#422AD5] cursor-pointer"></i>
+    </a>
+    <a>
+      <i class="ri-youtube-fill hover:text-[#422AD5] cursor-pointer"></i>
+    </a>
+    <a>
+      <i class="ri-instagram-fill hover:text-[#422AD5] cursor-pointer"></i>
+    </a>
+    <a>
+      <i class="ri-github-fill hover:text-[#422AD5] cursor-pointer"></i>
+    </a></span>
+  </div>
+  </nav>
+</footer>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
