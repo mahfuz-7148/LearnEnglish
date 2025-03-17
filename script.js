@@ -110,11 +110,11 @@ const fetchWordsForLevel = async (level) => {
             <img class="w-32" src="./assets/alert-error.png" alt="">
           </div>
         
-            <p class="text-[#79716B] font-normal text-sm pointer-events-none">
+            <p class="hind text-[#79716B] font-normal text-sm pointer-events-none">
                এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
             </p>
            
-            <h2 class="text-4xl font-medium text-[#292524] mt-3 pointer-events-none">
+            <h2 class="hind text-4xl font-medium text-[#292524] mt-3 pointer-events-none">
                নেক্সট Lesson এ যান
             </h2>
         </div>
@@ -141,7 +141,7 @@ const fetchWordsForLevel = async (level) => {
   <div class="card-body space-y-2">
     <h2 class="font-bold text-3xl">${word.word}</h2>
     <h2 class="font-medium text-lg">Meaning / Pronounciation</h2>
-    <h2 class="font-semibold text-3xl mb-10">${
+    <h2 class="hind font-semibold text-3xl mb-10">${
       word.meaning === null || word.meaning === undefined
         ? "অর্থ পাওয়া যায়নি"
         : word.meaning
@@ -190,7 +190,7 @@ const displayWordMOdal = (detailsModal) => {
   })</span></h1>   
             
             <h2 class="text-gray-900 font-semibold text-2xl">Meaning</h2>
-            <p class="text-gray-900 font-medium text-2xl">${
+            <p class="hind text-gray-900 font-medium text-2xl">${
               detailsModal.meaning === null ||
               detailsModal.meaning === undefined
                 ? "অর্থ পাওয়া যায়নি"
@@ -200,7 +200,7 @@ const displayWordMOdal = (detailsModal) => {
             <p class="text-gray-800 text-xl font-medium">${
               detailsModal.sentence
             } </p>
-            <h2 class="text-gray-900 font-semibold text-xl mb-5">সমার্থক শব্দ গুলো</h2>
+            <h2 class="hind text-gray-900 font-semibold text-xl mb-5">সমার্থক শব্দ গুলো</h2>
      </div>
    
            <div class='space-x-5 text-left'>

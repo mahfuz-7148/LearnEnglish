@@ -10,19 +10,39 @@
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"/>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
     <style>
       .active {
         background: #422AD5;
         color: white;
       }
+
+      .poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.hind {
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
     </style> 
 </head>
-<body>
+<body class="poppins">
     <nav id="nav" class="bg-gray-100/10 top-0 w-full sticky z-10 backdrop-blur-lg hidden">
         <div class="max-w-screen-2xl mx-auto navbar">
   <div class="navbar-start">
   
-    <a href="#home" class="flex gap-1 items-center text-xl cursor-pointer font-bold"><span>English</span> <img src="./assets/logo.png" alt=""> <span>জানালা</span></a>
+    <a href="#home" class="flex gap-1 items-center text-xl cursor-pointer font-bold"><span>English</span> <img src="./assets/logo.png" alt=""> <span class="hind">জানালা</span></a>
   </div>
   <div class="navbar-end gap-4">
     <a href="#faq" class="btn border text-xl border-[#422AD5] text-[#422AD5] rounded-md hover:bg-[#422AD5] hover:text-white"><i class="ri-question-fill"></i>FAQ</>
@@ -44,7 +64,7 @@
             English <span class="text-[#18181B]">is Easy!!</span>
         </h1>
        
-        <p class="text-xl text-[#18181B] leading-8 pointer-events-none">
+        <p class="hind text-xl text-[#18181B] leading-8 pointer-events-none">
             আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> 
             আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে 
             <br>
@@ -55,12 +75,12 @@
             <input id="nameInput" 
                 type="text" 
                 placeholder="Enter Your Name" 
-                class="w-full max-w-md p-3 border border-gray-300 rounded-lg"
+                class="w-full max-w-md p-3 border border-gray-300 rounded-lg text-black font-normal placeholder:text-black placeholder:font-extralight"
             >
             <input id="passInput"
                 type="password" placeholder="Enter Login Code (123456)"
                 
-                class="w-full max-w-md p-3 border border-gray-300 rounded-lg"
+                class="w-full max-w-md p-3 border border-gray-300 rounded-lg text-black placeholder:text-black placeholder:font-extralight font-normal"
             >
             
             <button onclick="login()" class="btn flex flex-col text-[#E0E7FF] bg-[#422AD5] rounded-md py-6 px-5"> GET STARTED</button>
@@ -121,11 +141,11 @@
 
                   <div class="rounded-lg text-center">
                   
-                      <p class="text-[#79716B] font-normal text-sm pointer-events-none">
+                      <p class="hind text-[#79716B] font-normal text-sm pointer-events-none">
                           আপনি এখনো কোন Lesson Select করেননি।
                       </p>
                     
-                      <h2 class="text-4xl font-medium text-[#292524] mt-3 pointer-events-none">
+                      <h2 class="hind text-4xl font-medium text-[#292524] mt-3 pointer-events-none">
                           একটি Lesson Select করুন।
                       </h2>
                   </div>
@@ -185,8 +205,8 @@ Differences => Cannot be used as constructors, more concise syntax compared to r
 <section class="bg-[#FFEBEB] mt-4">
     <footer class="max-w-screen-2xl mx-auto footer footer-horizontal text-[#18181B] p-10">
   <aside>
-     <a href="#home" class="flex gap-1 items-center text-xl cursor-pointer font-bold"><span>English</span> <img src="./assets/logo.png" alt=""> <span>জানালা</span></a>
-    <p>
+     <a href="#home" class="flex gap-1 items-center text-xl cursor-pointer font-bold"><span>English</span> <img src="./assets/logo.png" alt=""> <span class="hind">জানালা</span></a>
+    <p class="hind">
       ইংরেজি শিখুন সহজে
       <br />
       Providing ED-Tech Applications since 2025
@@ -198,13 +218,13 @@ Differences => Cannot be used as constructors, more concise syntax compared to r
     <h2 class="text-[#18181B font-semibold mb-3 text-2xl">Follow us</h2>
      <span> 
       <a href="https://www.facebook.com/" target="_blank">
-     <i class="ri-facebook-fill hover:text-[#422AD5] cursor-pointer"></i>
+     <i class="ri-facebook-fill hover:text-[#422AD5] text-blue-700 cursor-pointer"></i>
     </a>
     <a href="https://www.youtube.com/" target="_blank">
-      <i class="ri-youtube-fill hover:text-[#422AD5] cursor-pointer"></i>
+      <i class="ri-youtube-fill hover:text-[#422AD5] text-red-700 cursor-pointer"></i>
     </a>
     <a href="https://www.instagram.com/" target="_blank">
-      <i class="ri-instagram-fill hover:text-[#422AD5] cursor-pointer"></i>
+      <i class="ri-instagram-fill hover:text-[#422AD5] text-[#6228d7] cursor-pointer"></i>
     </a>
     <a href="https://www.github.com/" target="_blank">
       <i class="ri-github-fill hover:text-[#422AD5] cursor-pointer"></i>
